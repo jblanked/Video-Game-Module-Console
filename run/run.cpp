@@ -210,6 +210,8 @@ void VideoGameModuleConsoleRun::updateInput(InputEvent *event)
     {
         // return to menu
         shouldReturnToMenu = true;
+        VideoGameModuleConsoleApp *app = static_cast<VideoGameModuleConsoleApp *>(appContext);
+        furi_check(app);
         app->sendData("9"); // send game exit command
     }
     else
