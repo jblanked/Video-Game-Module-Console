@@ -210,6 +210,7 @@ void VideoGameModuleConsoleRun::updateInput(InputEvent *event)
     {
         // return to menu
         shouldReturnToMenu = true;
+        app->sendData("9"); // send game exit command
     }
     else
     {
